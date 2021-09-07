@@ -14,11 +14,14 @@ class SiteLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      extendBodyBehindAppBar: true,
       appBar: topNavigationBar(context, scaffoldKey),
-      body: ResponsiveWidget(
-        largeScreen: LargeScreen(),
-        smallScreen: SmallScreen(),
-      ),
+      body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: ResponsiveWidget(
+            largeScreen: LargeScreen(),
+            smallScreen: SmallScreen(),
+          )),
       drawer: Drawer(
         child: SideMenu(),
       ),

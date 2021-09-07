@@ -1,0 +1,25 @@
+import 'package:dashboard/constants/controllers.dart';
+import 'package:dashboard/utils/responsiveness.dart';
+import 'package:dashboard/widgets/custom_text.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class DriverPage extends StatelessWidget {
+  const DriverPage({ Key? key }) : super(key: key);
+
+    @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Obx(() {
+          return Row(children: [
+            Container(
+              margin: EdgeInsets.only(top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6),
+              child: CustomText(text: menuController.activeItem.value, weight: FontWeight.bold , size: 24,),
+            ),
+          ],);
+        })
+      ],
+    );
+  }
+}
