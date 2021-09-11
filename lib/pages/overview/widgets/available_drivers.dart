@@ -56,7 +56,7 @@ class AvailableDrivers extends StatelessWidget {
                   ),
                 ],
                 rows: List<DataRow>.generate(
-                    100,
+                    10,
                     (index) => DataRow(cells: [
                           DataCell(CustomText(text: "Avan Sharma")),
                           DataCell(CustomText(text: "New york City")),
@@ -85,7 +85,7 @@ class AvailableDrivers extends StatelessWidget {
                             padding: EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 6),
                             child: CustomText(
-                                text: "Available Delivery",
+                                text: "Assign Delivery",
                                 color: active.withOpacity(0.7),
                                 weight: FontWeight.bold),
                           )),
