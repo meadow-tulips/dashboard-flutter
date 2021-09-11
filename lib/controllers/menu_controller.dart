@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
 
-  var activeItem = OverViewPageRoute.obs;
+  var activeItem = OverViewPageRouteName.obs;
   var hoveredItem = "".obs;
 
   void changeActiveItemTo(String itemName) {
@@ -27,13 +27,13 @@ class MenuController extends GetxController {
 
   Widget generateIconFor(String itemName) {
     switch (itemName) {
-      case OverViewPageRoute:
+      case OverViewPageRouteName:
         return _customIcon(Icons.trending_up, itemName);
-      case DriversPageRoute:
+      case DriversPageRouteName:
         return _customIcon(Icons.drive_eta, itemName);
-      case ClientsPageRoute:
+      case ClientsPageRouteName:
         return _customIcon(Icons.people_alt_outlined, itemName);
-      case AuthenticationPageRoute:
+      case AuthenticationPageRouteName:
         return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);
